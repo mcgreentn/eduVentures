@@ -43,14 +43,13 @@ public class BattleManager : MonoBehaviour {
 	void Start () {
 		Next = -1;
 
-		// Debug
-		NPC tester = new NPC("Charles", SubjectType.History);
-		Enemy = tester;
-		GameStats.LastScene = "Central Park 1 + AndrenaGalaxy Test Scene";
-		StartBattle(Enemy);
+		StartBattle(GameStats.EnemyName, GameStats.EnemySubject);
 
 		attacksPre = new string[] {"Knowledge", "Thought", "Mental", "Smart", "Thinking", "Brain", "Mind", "Genius", "Cranial"};
 		attacksPost = new string[]{"Smash", "Storm", "Rain", "Bolt", "Charge", "Wave", "Burst", "Beam", "Power", "Slice", "Pow"};
+
+		NPC.LastID = 0;
+		GameStats.Init = true;
 	}
 
 	// Update is called once per frame
@@ -102,7 +101,7 @@ public class BattleManager : MonoBehaviour {
 	/**
 	 * Start battle with the current enemy. Start the dialogue with an enemy and set Next = 0;
 	 */
-	public void StartBattle(NPC Enemy) {
+	public void StartBattle(string EnemyName, SubjectType EnemySubject) {
 		ChoiceA.gameObject.SetActive(false);
 		ChoiceB.gameObject.SetActive(false);
 		ChoiceC.gameObject.SetActive(false);
@@ -111,10 +110,9 @@ public class BattleManager : MonoBehaviour {
 		Instruction.gameObject.SetActive(true);
 
 
-		this.Enemy = Enemy;
-		this.subject = Enemy.Subject;
-		Debug.Log(Enemy.Name);
-		QuestionText.text = Enemy.Name + " wants to quiz test you!";
+		this.subject = EnemySubject;
+		Debug.Log(EnemyName);
+		QuestionText.text = GameStats.EnemyName + " wants to quiz test you!";
 		Next = 0;
 	}
 
@@ -179,7 +177,7 @@ public class BattleManager : MonoBehaviour {
 		string pre = attacksPre[UnityEngine.Random.Range(0, attacksPre.Length)];
 		string post = attacksPost[UnityEngine.Random.Range(0, attacksPost.Length)];
 		AttackText.text = "You use " + pre + "-" + post;
-		DamageText.text = Enemy.Name + " took " + UnityEngine.Random.Range(100, 1001)+ " damage";
+		DamageText.text = GameStats.EnemyName + " took " + UnityEngine.Random.Range(100, 1001)+ " damage";
 		EnemyHurt.Play();
 		MainCamera.Play("PlayerAttack");
 		BattleToadsMatrix.Play("Attack");
@@ -208,7 +206,7 @@ public class BattleManager : MonoBehaviour {
 		InfoPanel.SetActive(true);
 		string pre = attacksPre[UnityEngine.Random.Range(0, attacksPre.Length)];
 		string post = attacksPost[UnityEngine.Random.Range(0, attacksPost.Length)];
-		AttackText.text = Enemy.Name + " used " + pre + "-" + post;
+		AttackText.text = GameStats.EnemyName + " used " + pre + "-" + post;
 		DamageText.text = "You took " + UnityEngine.Random.Range(100, 1001)+ " damage";
 
 		MainCamera.Play("EnemyAttack");
@@ -229,7 +227,7 @@ public class BattleManager : MonoBehaviour {
 	}
 
 	public void Lose() {
-		QuestionText.text = Enemy.Name + " dropped some serious knowledge on you. You run away safely...";
+		QuestionText.text = GameStats.EnemyName + " dropped some serious knowledge on you. You run away safely...";
 		Instruction.gameObject.SetActive(true);
 		Next = 7;
 		GameStats.BattleWon = 2;
@@ -241,8 +239,8 @@ public class BattleManager : MonoBehaviour {
 		double m = Math.Round(munnie, 2);
 		GameStats.Munnie += munnie;
 		QuestionText.text = NumRight + " out of " + TotalCount + " correct. You dropped some serious knowledge on "
-			+ Enemy.Name + ". They gave you $" + String.Format("{0:0.00}",m) + " as a reward.";
-		Enemy.Beaten = true;
+			+ GameStats.EnemyName + ". They gave you $" + String.Format("{0:0.00}",m) + " as a reward.";
+		GameStats.Beaten[GameStats.EnemyName] = true;
 		Next = 7;
 		GameStats.BattleWon = 1;
 	}

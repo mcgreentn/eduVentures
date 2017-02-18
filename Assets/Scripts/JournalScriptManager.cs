@@ -11,12 +11,11 @@ public class JournalScriptManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
 	}
 
     // Update is called once per frame
     void Update() {
-        jtext.text = dialogLines[currentLine];
+
         if (journalActive && Input.GetKeyDown(KeyCode.Space)) {
             currentLine += 1;
             //jBox.SetActive(false);
@@ -26,9 +25,10 @@ public class JournalScriptManager : MonoBehaviour {
                 jBox.SetActive(false);
                 journalActive = false;
                 currentLine = 0;
+                GameStats.CanMove = true;
             }
             jtext.text = dialogLines[currentLine];
-                }
+        }
      //  if (!journalActive)
        // {
          //   jBox.SetActive(false);
@@ -44,6 +44,6 @@ public class JournalScriptManager : MonoBehaviour {
     {
         journalActive = true;
         jBox.SetActive(true);
-        
     }
+
 }

@@ -23,9 +23,10 @@ public class DialogueManager : MonoBehaviour {
 
 			DBox.SetActive(false);
 			DialogueActive = false;
-			if (BattleFlag) 
+			GameStats.CanMove = true;
+			if (BattleFlag)
 			{
-				SceneManager.LoadScene ("Battle");	
+				SceneManager.LoadScene ("Battle");
 			}
 		}
 	}
@@ -38,7 +39,7 @@ public class DialogueManager : MonoBehaviour {
 		DText.text = newText;
 		DialogueActive = true;
 		DBox.SetActive(true);
+		GameStats.CanMove = false;
 	}
 
 }
-

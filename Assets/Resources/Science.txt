@@ -16,18 +16,6 @@ chromosome => nucleus => gene
 gene => nucleus => chromosome
 gene => chromosome => nucleus
 4
-A fox with thick fur would have a survival advantage over other foxes if
-there is more competition for food in the fox population
-the air temperature significantly decreases in winter
-a drought occurs, limiting the amount of water available
-a new disease appears that infects the foxes
-2
-Which fertilization and development method is most typical of humans before birth occurs?
-external fertilization and external development
-external fertilization and internal development
-internal fertilization and external development
-internal fertilization and internal development
-4
 A puggle is a type of dog first produced by mating two other types of dog, a pug and a beagle. This process is an example of
 asexual reproduction
 genetic engineering
@@ -58,7 +46,7 @@ ecological succession
 natural selection
 genetic engineering
 4
-One function of a plant�s seed is to
+One function of a plant's seed is to
 perform photosynthesis
 provide food for early development
 decompose dead organisms
