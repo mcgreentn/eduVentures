@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour {
 
 	public GameObject DBox;
 	public Text DText;
 
 	public bool DialogueActive;
+
+	public bool BattleFlag;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +20,13 @@ public class DialogueManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(DialogueActive && Input.GetKey(KeyCode.Space)) {
+
 			DBox.SetActive(false);
 			DialogueActive = false;
+			if (BattleFlag) 
+			{
+				SceneManager.LoadScene ("Battle");	
+			}
 		}
 	}
 	/**
@@ -32,4 +39,6 @@ public class DialogueManager : MonoBehaviour {
 		DialogueActive = true;
 		DBox.SetActive(true);
 	}
+
 }
+

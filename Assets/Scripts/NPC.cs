@@ -1,11 +1,44 @@
-public class NPC {
-    public string Name {get; set;}
-    public SubjectType Subject {get;set;}
-    public bool Beaten {get;set;}
-    
-    public NPC(string name, SubjectType subject) {
-        Name = name;
-        Subject = subject;
-        Beaten = false;
-    }
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NPC : MonoBehaviour  
+{
+	public string Name {get; set;}
+	public SubjectType Subject {get;set;}
+	public DialogueManager diamang;
+	private BattleManager batman;
+	public string BattleEnterDialogue;
+	public bool Beaten {get;set;}
+
+
+	public NPC(string name, SubjectType subject) 
+	{
+		Name = name;
+		Subject = subject;
+		Beaten = false;
+	}
+	void Start()
+	{
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		//		if (myRigidBody.collisionDetectionMode == true)
+		//		{
+		//			// diamang.ShowBox();
+		//
+		//			batman.StartBattle (this);
+		//		}
+
+
+	}
+	void OnCollisionEnter2D(Collision2D other) {
+		Debug.Log ("here");		
+		GameStats.Enemy = this;
+		diamang.BattleFlag = true;
+		diamang.ShowBox(this.name, this.BattleEnterDialogue );
+
+	}
 }
