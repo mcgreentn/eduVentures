@@ -17,6 +17,13 @@ public class BattleManager : MonoBehaviour {
 	public ParticleSystem PlayerHurt;
 	public ParticleSystem EnemyHurt;
 
+	public GameObject InfoPanel;
+	public Text AttackText;
+	public Text DamageText;
+
+	public Animator MainCamera;
+	public Animator BattleToadsMatrix;
+
 	public int QuestionCount;
 	public int TotalCount;
 	public int NumRight;
@@ -28,17 +35,21 @@ public class BattleManager : MonoBehaviour {
 	public SubjectType subject;
 	public Question CurrentQuestion;
 
-
+	private string[] attacksPre;
+	private string[] attacksPost;
 
 	// Use this for initialization
 	void Start () {
 		Next = -1;
 
 		// Debug
-		NPC tester = new NPC("Charles", SubjectType.Math);
+		NPC tester = new NPC("Charles", SubjectType.History);
 		Enemy = tester;
 		GameStats.LastScene = "Central Park 1 + AndrenaGalaxy Test Scene";
 		StartBattle(Enemy);
+
+		attacksPre = new string[] {"Knowledge", "Thought", "Mental", "Smart", "Thinking", "Brain", "Mind", "Genius", "Cranial"};
+		attacksPost = new string[]{"Smash", "Storm", "Rain", "Bolt", "Charge", "Wave", "Burst", "Beam", "Power", "Slice", "Pow"};
 	}
 
 	// Update is called once per frame
@@ -67,7 +78,7 @@ public class BattleManager : MonoBehaviour {
 		}
 
 		else if(Next == 5 && Input.GetKeyDown(KeyCode.Space)) {
-			if(QuestionCount < TotalCount && Redos > 0) {
+			if(QuestionCount < TotalCount && Redos >= 0) {
 				NextQuestion();
 			} else {
 				// end battle
@@ -93,7 +104,10 @@ public class BattleManager : MonoBehaviour {
 		ChoiceB.gameObject.SetActive(false);
 		ChoiceC.gameObject.SetActive(false);
 		ChoiceD.gameObject.SetActive(false);
+		InfoPanel.SetActive(false);
 		Instruction.gameObject.SetActive(true);
+
+
 		this.Enemy = Enemy;
 		this.subject = Enemy.Subject;
 		Debug.Log(Enemy.Name);
@@ -158,27 +172,51 @@ public class BattleManager : MonoBehaviour {
 		ChoiceD.gameObject.SetActive(false);
 		Instruction.gameObject.SetActive(true);
 
+		InfoPanel.SetActive(true);
+		string pre = attacksPre[UnityEngine.Random.Range(0, attacksPre.Length)];
+		string post = attacksPost[UnityEngine.Random.Range(0, attacksPost.Length)];
+		AttackText.text = "You use " + pre + "-" + post;
+		DamageText.text = Enemy.Name + " took " + UnityEngine.Random.Range(100, 1001)+ " damage";
 		EnemyHurt.Play();
+		MainCamera.Play("PlayerAttack");
+		BattleToadsMatrix.Play("Attack");
 	}
 
 	public void DisplayWrong() {
 		NumWrong++;
 		Redos--;
-
-		QuestionText.text = "Incorrect! The answer is " + CurrentQuestion.Answer
-			+ ". You have " + Redos + " lives remaining!";
-
+		if(Redos == 1) {
+			QuestionText.text = "Incorrect! The answer is \"" + CurrentQuestion.AnswerText
+				+ "\". You have " + Redos + " life remaining!";
+		}
+		else if(Redos == 0) {
+			QuestionText.text = "Incorrect! The answer is \"" + CurrentQuestion.AnswerText
+				+ "\". You are on your last life! Be careful!";
+		} else {
+			QuestionText.text = "Incorrect! The answer is \"" + CurrentQuestion.AnswerText
+				+ "\". Oh no! You have no more lives!";
+		}
 		ChoiceA.gameObject.SetActive(false);
 		ChoiceB.gameObject.SetActive(false);
 		ChoiceC.gameObject.SetActive(false);
 		ChoiceD.gameObject.SetActive(false);
 		Instruction.gameObject.SetActive(true);
 
+		InfoPanel.SetActive(true);
+		string pre = attacksPre[UnityEngine.Random.Range(0, attacksPre.Length)];
+		string post = attacksPost[UnityEngine.Random.Range(0, attacksPost.Length)];
+		AttackText.text = Enemy.Name + " used " + pre + "-" + post;
+		DamageText.text = "You took " + UnityEngine.Random.Range(100, 1001)+ " damage";
+
+		MainCamera.Play("EnemyAttack");
+		BattleToadsMatrix.Play("Attack");
+
 		PlayerHurt.Play();
 	}
 	public void Dots() {
 		QuestionText.text = "...";
 		Instruction.gameObject.SetActive(true);
+		InfoPanel.SetActive(false);
 		Next = 5;
 	}
 	public void NextQuestion() {
@@ -195,8 +233,9 @@ public class BattleManager : MonoBehaviour {
 	}
 
 	public void Win() {
+		float munnie = UnityEngine.Random.Range(0.01f, 20.00f);
 		QuestionText.text = NumRight + " out of " + TotalCount + " correct. You dropped some serious knowledge on "
-			+ Enemy.Name + ". They gave you $0.40 as a reward.";
+			+ Enemy.Name + ". They gave you $" + Math.Round(munnie, 2) + " as a reward.";
 		Enemy.Beaten = true;
 		Next = 7;
 		GameStats.BattleWon = 1;

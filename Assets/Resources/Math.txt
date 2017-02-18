@@ -106,12 +106,6 @@ The square root of a number is between 8 and 9. Which of these could be that num
 71
 89
 3
-Brandon wants to conduct a survey as to whether mushrooms should be added to the pizzas sold in the school cafeteria. Which sampling method will offer Brandon the best results?
-interview every vegetarian student
-interview every student at a pizza parlor
-interview every student who brings lunch from home
-interview every student who eats lunch in the cafeteria
-4
 What is the value of n in the equation below? 2n + 1 = 21
 10
 11
