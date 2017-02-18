@@ -635,6 +635,11 @@ MonoBehaviour:
   ChoiceC: {fileID: 314930887}
   ChoiceD: {fileID: 1470550627}
   Instruction: {fileID: 1511005331}
+  QuestionCount: 0
+  TotalCount: 5
+  NumRight: 0
+  NumWrong: 0
+  Redos: 2
   Next: 1
   subject: 0
 --- !u!1 &1383376585
