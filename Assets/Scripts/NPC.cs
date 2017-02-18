@@ -1,29 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class NPC : MonoBehaviour
 {
-	public string Name {get; set;}
+	public string Name;
 	public SubjectType Subject;
 	public DialogueManager diamang;
 	private BattleManager batman;
 	public string BattleEnterDialogue;
+	public string PostBattleDialogue;
+	public GameManager GM;
+	public int ID;
 	public bool Beaten {get;set;}
+	public static int LastID;
 
+	private NPC self;
 
+	void Start() {
+		ID = LastID;
+		LastID++;
+		if(!GameStats.Init) {
+			GameStats.Beaten.Add(false);
+		}
+	}
 	public NPC(string name, SubjectType subject)
 	{
-		Name = name;
-		Subject = subject;
-		Beaten = false;
+
+
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		Debug.Log ("here");
-		GameStats.Enemy = this;
-		diamang.BattleFlag = true;
-		diamang.ShowBox(this.name, this.BattleEnterDialogue );
-
+		if(!GameStats.Beaten[ID]) {
+			GameStats.EnemyName = Name;
+			GameStats.EnemySubject = Subject;
+			GameStats.EnemyID = ID;
+			diamang.BattleFlag = true;
+			diamang.ShowBox(this.name, this.BattleEnterDialogue);
+			GameStats.LastScene = SceneManager.GetActiveScene().name;
+			GM.SavePlayerPosition();
+		} else {
+			diamang.BattleFlag = false;
+			diamang.ShowBox(this.name, this.PostBattleDialogue);
+		}
 	}
 }
