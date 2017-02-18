@@ -222,6 +222,17 @@ Prefab:
       propertyPath: Subject
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: Name
+      value: Youngster Joey
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ba7d603a47e34947a6349730f7f692e, type: 2}
   m_IsPrefabParent: 0
@@ -328,6 +339,17 @@ Prefab:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: Name
+      value: Urban Weight Lifter
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ba7d603a47e34947a6349730f7f692e, type: 2}
   m_IsPrefabParent: 0
@@ -694,6 +716,17 @@ Prefab:
       propertyPath: Subject
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: Name
+      value: Woman napping in the flowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ba7d603a47e34947a6349730f7f692e, type: 2}
   m_IsPrefabParent: 0
@@ -775,6 +808,17 @@ Prefab:
       propertyPath: Subject
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: Name
+      value: Artist Painting the Lake
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ba7d603a47e34947a6349730f7f692e, type: 2}
   m_IsPrefabParent: 0
@@ -904,6 +948,17 @@ Prefab:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: Name
+      value: Ice Skater
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ba7d603a47e34947a6349730f7f692e, type: 2}
   m_IsPrefabParent: 0
@@ -1204,6 +1259,17 @@ Prefab:
       propertyPath: Subject
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: Name
+      value: Lunching Office Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098328718643584, guid: 5ba7d603a47e34947a6349730f7f692e,
+        type: 2}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ba7d603a47e34947a6349730f7f692e, type: 2}
   m_IsPrefabParent: 0
@@ -1234,9 +1300,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 8}
+  m_Offset: {x: -0.042943574, y: 7.0542397}
   serializedVersion: 2
-  m_Size: {x: 20, y: 30}
+  m_Size: {x: 18.364574, y: 27.550571}
 --- !u!4 &1806247200
 Transform:
   m_ObjectHideFlags: 0
