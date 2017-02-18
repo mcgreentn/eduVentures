@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
 	public string Name {get; set;}
-	public SubjectType Subject {get;set;}
+	public SubjectType Subject;
 	public DialogueManager diamang;
 	private BattleManager batman;
 	public string BattleEnterDialogue;
