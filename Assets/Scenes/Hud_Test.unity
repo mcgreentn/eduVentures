@@ -445,6 +445,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1734647441}
     m_Modifications:
+    - target: {fileID: 114511833613569240, guid: 4f9d98a2a99ba4dce9b113a0502b9f7a,
+        type: 2}
+      propertyPath: dialogLines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 224238235431306802, guid: 4f9d98a2a99ba4dce9b113a0502b9f7a,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -587,6 +592,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114133923823259950, guid: 19a1e1e445d324c06b0aabf60c57b576,
+        type: 2}
+      propertyPath: dialogueLines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4246626336954710, guid: 19a1e1e445d324c06b0aabf60c57b576, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.6
@@ -618,6 +628,11 @@ Prefab:
     - target: {fileID: 4246626336954710, guid: 19a1e1e445d324c06b0aabf60c57b576, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 61501674678305094, guid: 19a1e1e445d324c06b0aabf60c57b576,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a1e1e445d324c06b0aabf60c57b576, type: 2}
