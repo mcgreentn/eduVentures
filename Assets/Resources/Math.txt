@@ -1,0 +1,54 @@
+Here are the heights, in meters, of five different buildings: 180, 170, 120, 180, 160. What is the median height, in meters, of the buildings?
+162
+165
+170
+180
+3
+What algebraic equation represents “three times the difference of a number, x, and nine equals fifteen”?
+9x - 3 = 15
+3(9) - x = 15
+9 - 3x = 15
+3(x - 9) = 15
+4
+Roberto has a container with 4,200 milliliters of water. How many liters of water are in Roberto’s container? (1 liter  1,000 milliliters)
+0.042
+0.42
+4.2
+42
+3
+A circle has a radius of 18 inches. What is the circumference of the circle in terms of pi? C=2(pi)r
+36
+20
+18
+9
+1
+Mica and Denise are reading the same novel. Mica has read 1/2 of the novel, and Denise has read 1/3 of the novel. How much more of the novel has Mica read than Denise?
+1/6
+2/5
+3/5
+5/6
+1
+Marion fills a bucket with water. The capacity of the bucket is 2 quarts. What is the capacity of Marion’s bucket in gallons? 1 gallon = 4 quarts
+1/4
+1/2
+1
+2
+2
+Rona drove 56 miles to visit a friend. She drove 42 miles before stopping for gas. What percent of the drive did Rona complete before stopping for gas?
+75%
+25%
+42%
+14%
+1
+Ernie has 4 yellow straws, 3 green straws, and 1 blue straw in a kitchen drawer. Each straw is the same size and shape. Ernie pulls out one straw from the drawer without looking. What is the probability of Ernie pulling out a green straw?
+1/8
+3/8
+5/8
+7/8
+2
+Students auditioning for a singing contest are given a list of 7 rock songs and 5 country songs. If each student must pick 1 rock song and 1 country song, how many different song combinations can each student pick?
+2
+12
+35
+75
+3
