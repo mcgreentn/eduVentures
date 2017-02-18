@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour
 	private BattleManager batman;
 	public string BattleEnterDialogue;
 	public bool Beaten {get;set;}
-
+	private AudioManager AMan;
 
 	public NPC(string name, SubjectType subject)
 	{
@@ -20,6 +20,7 @@ public class NPC : MonoBehaviour
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
+		AMan = FindObjectOfType<AudioManager>();
 		Debug.Log ("here");
 		GameStats.Enemy = this;
 		diamang.BattleFlag = true;
