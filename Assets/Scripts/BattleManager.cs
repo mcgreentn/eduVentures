@@ -13,6 +13,10 @@ public class BattleManager : MonoBehaviour {
 	public Text ChoiceC;
 	public Text ChoiceD;
 	public Text Instruction;
+
+	public ParticleSystem PlayerHurt;
+	public ParticleSystem EnemyHurt;
+
 	public int QuestionCount;
 	public int TotalCount;
 	public int NumRight;
@@ -153,6 +157,8 @@ public class BattleManager : MonoBehaviour {
 		ChoiceC.gameObject.SetActive(false);
 		ChoiceD.gameObject.SetActive(false);
 		Instruction.gameObject.SetActive(true);
+
+		EnemyHurt.Play();
 	}
 
 	public void DisplayWrong() {
@@ -166,6 +172,8 @@ public class BattleManager : MonoBehaviour {
 		ChoiceC.gameObject.SetActive(false);
 		ChoiceD.gameObject.SetActive(false);
 		Instruction.gameObject.SetActive(true);
+
+		PlayerHurt.Play();
 	}
 	public void Dots() {
 		QuestionText.text = "...";
