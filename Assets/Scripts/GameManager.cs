@@ -6,9 +6,14 @@ public class GameManager : MonoBehaviour {
 	public GameObject Player;
 
 	public static Vector3 LastPlayerPosition;
+	public static Vector3 StartPlayerPosition;
 	// Use this for initialization
 	void Start () {
-		Player.transform.position = LastPlayerPosition;
+		if(GameStats.BattleWon == 1) {
+			Player.transform.position = LastPlayerPosition;
+		} else if(GameStats.BattleWon == 2) {
+			Player.transform.position = StartPlayerPosition;
+		}
 	}
 
 	// Update is called once per frame

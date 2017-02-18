@@ -71,7 +71,7 @@ public class BattleManager : MonoBehaviour {
 				NextQuestion();
 			} else {
 				// end battle
-				if(Redos <= 0) {
+				if(Redos < 0) {
 					// lose
 					Lose();
 				} else {
@@ -167,6 +167,7 @@ public class BattleManager : MonoBehaviour {
 
 		QuestionText.text = "Incorrect! The answer is " + CurrentQuestion.Answer
 			+ ". You have " + Redos + " lives remaining!";
+
 		ChoiceA.gameObject.SetActive(false);
 		ChoiceB.gameObject.SetActive(false);
 		ChoiceC.gameObject.SetActive(false);
@@ -190,12 +191,15 @@ public class BattleManager : MonoBehaviour {
 		QuestionText.text = Enemy.Name + " dropped some serious knowledge on you. You run away safely...";
 		Instruction.gameObject.SetActive(true);
 		Next = 7;
+		GameStats.BattleWon = 2;
 	}
 
 	public void Win() {
-		QuestionText.text = "You dropped some serious knowledge on " + Enemy.Name + ". They gave you $0.40 as a reward.";
+		QuestionText.text = NumRight + " out of " + TotalCount + " correct. You dropped some serious knowledge on "
+			+ Enemy.Name + ". They gave you $0.40 as a reward.";
 		Enemy.Beaten = true;
 		Next = 7;
+		GameStats.BattleWon = 1;
 	}
 
 }
