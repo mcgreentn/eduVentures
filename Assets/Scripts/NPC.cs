@@ -33,7 +33,6 @@ public class NPC : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D other) {
 		AMan = FindObjectOfType<AudioManager>();
-		GameStats.Enemy = this;
 		diamang.BattleFlag = true;
 		diamang.ShowBox(this.name, this.BattleEnterDialogue );
 
