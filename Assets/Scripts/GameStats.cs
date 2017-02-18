@@ -14,4 +14,8 @@ public class GameStats {
     public static bool Init = false;
 
     public static bool CanMove = true;
+
+    public static int GameMode = 0;
+
+    public static int JournalFlag = 0;
 }
