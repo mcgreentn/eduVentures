@@ -19,6 +19,7 @@ public class JournalHolder : MonoBehaviour {
             {
                 jman.dialogLines = dialogueLines;
                 jman.currentLine = 0;
+                jman.jtext.text = dialogueLines[0];
                 jman.ShowDialogue();
             }
         }

@@ -16,7 +16,7 @@ public class JournalScriptManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        jtext.text = dialogLines[currentLine];
+
         if (journalActive && Input.GetKeyDown(KeyCode.Space)) {
             currentLine += 1;
             //jBox.SetActive(false);
