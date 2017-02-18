@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour
 		ID = LastID;
 		LastID++;
 		if(!GameStats.Init) {
-			GameStats.Beaten.Add(false);
+			GameStats.Beaten.Add(Name, false);
 		}
 	}
 	public NPC(string name, SubjectType subject)
@@ -31,10 +31,12 @@ public class NPC : MonoBehaviour
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if(!GameStats.Beaten[ID]) {
+		if(!GameStats.Beaten[Name]) {
 			GameStats.EnemyName = Name;
 			GameStats.EnemySubject = Subject;
 			GameStats.EnemyID = ID;
+			Debug.Log("ID = " + ID);
+			Debug.Log("Name = " + Name);
 			diamang.BattleFlag = true;
 			diamang.ShowBox(this.name, this.BattleEnterDialogue);
 			GameStats.LastScene = SceneManager.GetActiveScene().name;

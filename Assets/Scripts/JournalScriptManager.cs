@@ -11,7 +11,7 @@ public class JournalScriptManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+
 	}
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class JournalScriptManager : MonoBehaviour {
                 currentLine = 0;
             }
             jtext.text = dialogLines[currentLine];
-                }
+        }
      //  if (!journalActive)
        // {
          //   jBox.SetActive(false);
@@ -44,6 +44,6 @@ public class JournalScriptManager : MonoBehaviour {
     {
         journalActive = true;
         jBox.SetActive(true);
-        
+
     }
 }

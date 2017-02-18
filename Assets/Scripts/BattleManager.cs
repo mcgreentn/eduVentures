@@ -237,7 +237,7 @@ public class BattleManager : MonoBehaviour {
 		GameStats.Munnie += munnie;
 		QuestionText.text = NumRight + " out of " + TotalCount + " correct. You dropped some serious knowledge on "
 			+ GameStats.EnemyName + ". They gave you $" + String.Format("{0:0.00}",m) + " as a reward.";
-		GameStats.Beaten[GameStats.EnemyID] = true;
+		GameStats.Beaten[GameStats.EnemyName] = true;
 		Next = 7;
 		GameStats.BattleWon = 1;
 	}

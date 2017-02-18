@@ -10,7 +10,7 @@ public class JournalHolder : MonoBehaviour {
 	void Start () {
         jman = FindObjectOfType<JournalScriptManager>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.J))

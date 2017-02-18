@@ -10,6 +10,8 @@ public class GameStats {
 
     public static float Munnie;
 
-    public static List<bool> Beaten = new List<bool>();
+    public static Dictionary<string, bool> Beaten = new Dictionary<string, bool>();
     public static bool Init = false;
+
+    public static bool CanMove = true;
 }
