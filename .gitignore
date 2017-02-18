@@ -28,3 +28,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+Assets/Tiled2Unity/Meshes/CentralPark1.obj
+
+*.meta

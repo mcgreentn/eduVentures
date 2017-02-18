@@ -135,9 +135,9 @@ public class BattleManager : MonoBehaviour {
 			case SubjectType.Science:
 				current = QuestionParser.ScienceQs[UnityEngine.Random.Range(0, QuestionParser.ScienceQs.Count)];
 				break;
-			case SubjectType.English:
-				current = QuestionParser.EnglishQs[UnityEngine.Random.Range(0, QuestionParser.EnglishQs.Count)];
-				break;
+			// case SubjectType.English:
+			// 	current = QuestionParser.EnglishQs[UnityEngine.Random.Range(0, QuestionParser.EnglishQs.Count)];
+			// 	break;
 		}
 		CurrentQuestion = current;
 		QuestionText.text = current.Q;
@@ -233,9 +233,12 @@ public class BattleManager : MonoBehaviour {
 	}
 
 	public void Win() {
-		float munnie = UnityEngine.Random.Range(0.01f, 20.00f);
+		// float munnie = UnityEngine.Random.Range(0.01f, 20.00f);
+		float munnie = NumRight * (NumRight / (TotalCount / 1.0f));
+		double m = Math.Round(munnie, 2);
+		GameStats.Munnie += munnie;
 		QuestionText.text = NumRight + " out of " + TotalCount + " correct. You dropped some serious knowledge on "
-			+ Enemy.Name + ". They gave you $" + Math.Round(munnie, 2) + " as a reward.";
+			+ Enemy.Name + ". They gave you $" + String.Format("{0:0.00}",m) + " as a reward.";
 		Enemy.Beaten = true;
 		Next = 7;
 		GameStats.BattleWon = 1;
