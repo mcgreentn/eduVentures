@@ -20,6 +20,7 @@ public class CameraController : MonoBehaviour {
         maxBounds = boundBox.bounds.max;
 
         theCamera = GetComponent<Camera>();
+
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
 
@@ -27,8 +28,9 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
-		// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = Player.transform.position + Offset;
+        
+        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
+        transform.position = Vector3.Lerp(transform.position,Player.transform.position + Offset,.07f);
         float clampedX = Mathf.Clamp(transform.position.x,minBounds.x + halfWidth, maxBounds.x - halfWidth);
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
         transform.position = new Vector3(clampedX,clampedY,transform.position.z);
