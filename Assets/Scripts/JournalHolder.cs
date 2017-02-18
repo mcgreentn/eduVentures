@@ -11,7 +11,6 @@ public class JournalHolder : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         jman = FindObjectOfType<JournalScriptManager>();
-        littleFlag = 0;
         UpdateJournalLines();
     }
 
@@ -41,18 +40,24 @@ public class JournalHolder : MonoBehaviour {
             "Today is your 6th grade class New York State regents testing day! You are nervous about taking your tests...it can be stressful...",
             "Through your window, you see your best friend Connie walking away from school towards Central Park. What is she doing??!",
             "You decide to follow her..."};
-            Show();
-        }
-        if(littleFlag == 1) {
+        } else if(littleFlag == 1) {
             dialogueLines = new string[] {"It’s unsafe! Weird people live in central park! You need to read the safety sign for your own protection. Step up to the sign to read it."};
+        } else if(littleFlag == 2) {
+            dialogueLines = new string[] {"Looks like there is some graffiti written on the sign…"};
+        } else if(littleFlag == 3) {
+            dialogueLines = new string[] {"[something clever]","See if the people in park have seen Connie. Walk up to strangers to talk to them. "};
         }
     }
 
     public void Show() {
-        GameStats.CanMove = false;
-        jman.dialogLines = dialogueLines;
-        jman.currentLine = 0;
-        jman.jtext.text = dialogueLines[0];
-        jman.ShowDialogue();
+        if(GameStats.DeathFlag == 0) {
+            GameStats.CanMove = false;
+            jman.dialogLines = dialogueLines;
+            jman.currentLine = 0;
+            jman.jtext.text = dialogueLines[0];
+            jman.ShowDialogue();
+        } else {
+            GameStats.DeathFlag = 0;
+        }
     }
 }

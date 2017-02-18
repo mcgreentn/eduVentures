@@ -18,4 +18,5 @@ public class GameStats {
     public static int GameMode = 0;
 
     public static int JournalFlag = 0;
+    public static int DeathFlag = 0;
 }

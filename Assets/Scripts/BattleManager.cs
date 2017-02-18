@@ -228,6 +228,7 @@ public class BattleManager : MonoBehaviour {
 		Instruction.gameObject.SetActive(true);
 		Next = 7;
 		GameStats.BattleWon = 2;
+		GameStats.DeathFlag = 1;
 	}
 
 	public void Win() {

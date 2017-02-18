@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class OneTimeBoxCollider : MonoBehaviour {
 
-	public JournalHolder jh;
+
+	public int ID;
 	// Use this for initialization
 	void Start () {
 
@@ -15,10 +16,23 @@ public class OneTimeBoxCollider : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter2D(Collision2D other) {
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.tag == "Player"){
 		if(GameStats.GameMode == 0) {
-			GameStats.JournalFlag += 1;
-			Destroy(this.gameObject);
+			if(ID == 0){
+				GameStats.JournalFlag += 1;
+				Destroy(this.gameObject);
+			}
+		 	else if (ID == 1) {
+				GameStats.JournalFlag +=1;
+				Destroy(this.gameObject);
+			}
+		} else if(GameStats.GameMode == 1) {
+				if(ID == 2) {
+					GameStats.JournalFlag +=1;
+					Destroy(this.gameObject);
+				}
+			}
 		}
 	}
 }
