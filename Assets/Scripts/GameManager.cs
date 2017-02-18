@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 	public GameObject Player;
+	public GameObject Camera;
 
 	public static Vector3 LastPlayerPosition;
 	public static Vector3 StartPlayerPosition;
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour {
 		SetStartPosition();
 		if(GameStats.BattleWon == 1) {
 			Player.transform.position = LastPlayerPosition;
+			Vector3 camPos = new Vector3(LastPlayerPosition.x, LastPlayerPosition.y, -10f);
+			Camera.transform.position = camPos;
 			Debug.Log("Last Pos");
 		} else if(GameStats.BattleWon == 2) {
 			Player.transform.position = StartPlayerPosition;

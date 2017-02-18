@@ -226,13 +226,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 207814807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7712fbbfa8548e74ab5ed6de6f8f00fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fb436c40343c094d9252592a407c64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Welcome to Central Park
-  Dialogue: "Looks like there is some graffiti written on the sign\u2026 \u201Cdon\u2019t
-    follow me! I\u2019m done going to school -Connie\u201D "
-  diamang: {fileID: 0}
+  Dialogue: Don't play hooky in here!
+  diamang: {fileID: 694241623}
 --- !u!1 &249305797
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,12 +310,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 249305797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7712fbbfa8548e74ab5ed6de6f8f00fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fb436c40343c094d9252592a407c64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: '!Caution!'
-  Dialogue: Pesticide application. Keep off grass until dry.
-  diamang: {fileID: 0}
+  Dialogue: Creepy People are here!
+  diamang: {fileID: 694241623}
 --- !u!1 &294592923
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 691027931}
+  Camera: {fileID: 506200366}
 --- !u!4 &294592925
 Transform:
   m_ObjectHideFlags: 0
@@ -924,6 +924,11 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 691027931}
+    - target: {fileID: 114070898494599936, guid: ad60d4d5ab0390b41b070ac05aee0708,
+        type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 506200366}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad60d4d5ab0390b41b070ac05aee0708, type: 2}
   m_IsPrefabParent: 0
