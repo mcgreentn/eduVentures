@@ -268,7 +268,8 @@ public class BattleManager : MonoBehaviour {
 		GameStats.BattleWon = 1;
 		GameStats.TrainersBeaten += 1;
 		if(GameStats.EnemyName.Equals("Connie")) {
-			GameStats.GameMode += 1;	
+			GameStats.GameMode += 1;
+			GameStats.BeatConnie = true;
 		}
 	}
 

@@ -14,6 +14,7 @@ public class GameStats {
     public static float Munnie;
 
     public static Dictionary<string, bool> Beaten = new Dictionary<string, bool>();
+    public static bool BeatConnie = false;
     public static bool Init = false;
 
     public static bool CanMove = true;

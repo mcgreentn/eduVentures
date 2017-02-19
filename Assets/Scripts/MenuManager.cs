@@ -16,6 +16,11 @@ public class MenuManager : MonoBehaviour {
 		GameStats.DeathFlag = 0;
 	    GameStats.TrainersBeaten = 0;
 		GameStats.Beaten = new Dictionary<string, bool>();
+		GameStats.BeatConnie = false;
 		SceneManager.LoadScene("centralParkMapOneVersion2");
+	}
+
+	public void GoToMenu() {
+		SceneManager.LoadScene("Main Menu");
 	}
 }
