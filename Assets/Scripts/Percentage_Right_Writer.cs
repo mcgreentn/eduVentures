@@ -15,6 +15,6 @@ public class Percentage_Right_Writer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        percent.text = "You got a: " + (GameStats.QuestionsCorrect/GameStats.QuestionsAsked *100f) + "%" ;
+        percent.text = "You got a: " + string.Format("{0:0.00}",((GameStats.QuestionsCorrect*1.0f)/(GameStats.QuestionsAsked *1.0f) *100f)) + "%" ;
     }
 }

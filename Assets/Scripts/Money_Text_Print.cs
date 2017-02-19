@@ -12,6 +12,6 @@ public class Money_Text_Print : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        muney.text = "You Earned: $" + GameStats.Munnie + " that's so much!";
+        muney.text = "You Earned: $" + System.String.Format("{0:0.00}", GameStats.Munnie) + " that's so much!";
 	}
 }
