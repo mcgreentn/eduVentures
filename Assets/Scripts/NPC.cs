@@ -34,7 +34,19 @@ public class NPC : MonoBehaviour
 		if(GameStats.GameMode == 0) {
 			diamang.ShowBox(this.name, "Shouldn't you be in school?");
 		} else if(GameStats.GameMode >= 1) {
-			if(!GameStats.Beaten[Name]) {
+			if(Name.Equals("Connie")) {
+				GameStats.EnemyName = Name;
+				GameStats.EnemySubject = Subject;
+				GameStats.EnemyID = ID;
+				Debug.Log("ID = " + ID);
+				Debug.Log("Name = " + Name);
+				diamang.BattleFlag = true;
+				diamang.ShowBox(this.name, this.BattleEnterDialogue);
+				GameStats.LastScene = SceneManager.GetActiveScene().name;
+				GM.SavePlayerPosition();
+				AMan.PlayAlert();
+			}
+			else if(!GameStats.Beaten[Name]) {
 				GameStats.EnemyName = Name;
 				GameStats.EnemySubject = Subject;
 				GameStats.EnemyID = ID;
