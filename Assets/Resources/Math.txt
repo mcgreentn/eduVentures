@@ -1,4 +1,4 @@
-Here are the heights, in meters, of five different buildings: 180, 170, 120, 180, 160. What is the median height, in meters, of the buildings?
+﻿Here are the heights, in meters, of five different buildings: 180, 170, 120, 180, 160. What is the median height, in meters, of the buildings?
 162
 165
 170
@@ -112,3 +112,87 @@ What is the value of n in the equation below? 2n + 1 = 21
 18
 20
 1
+A pair of sandals is on sale for 20% off the original price.If the original price is $16.00, what is the sale price?
+$3.20
+$12.00
+$12.80
+$19.20 
+3
+Simplify 3x+9x
+12
+12x
+12x*x
+12(x+x)
+2
+Reneé must solve the equation 4 x + 12 = 6x. If she subtracts 4 x from the left side of the equation, what should Reneé write on the right side of the equation?
+2
+2x
+10
+10x
+2
+Mark’s cats eat 72 ounces of food in one week.How many pounds of food do Mark’s cats eat in one week? (1 Pound = 16 Ounces)
+1/4
+7/2
+9/2
+29/4
+3
+Jordan has $608 in his savings account. He withdraws 15% of the money to pay for school clothes.Which is the best estimate for the amount of money Jordan withdraws?
+$40
+$90
+$400
+$510
+2
+The cost of one burrito, b, and one taco, a, is less than the cost of two burritos. Which inequality represents this relationship?
+b+a<2b
+b+a<b*b
+2b < b+a
+b*b < b+a
+1
+Omar wants to solve the equation 3x-2 = 10. Which steps could Omar follow to find the solution?
+Add 2 to both sides. Then divide both sides by 3.
+Divide both sides by 3. Then add 2 to both sides.
+Subtract 2 from both sides. Then divide both sides by 3.
+Multiply both sides by 3. Then subtract 2 from both sides. 
+1
+Janine’s dog weighs three pounds less than twice the weight of Wanda’s dog, d. Which expression represents the weight of Janine’s dog?
+2+d-3
+3+d-2
+2d-3
+3-2d
+3
+Carol wants to earn at least $150.00 for her charity while running a race. She will earn $20.00 for participating plus $7.00 for each mile she runs. If m represents the number of miles she runs, which inequality represents the money Carol wants to earn?
+7m + 20 <= 150
+7m + 20 >= 150
+20m + 7 <= 150
+20m + 7 >= 150
+2
+Anneke and her parents had dinner at their favorite restaurant. The dinner bill was $50.00, and her parents tipped their server 20% of the bill. How much money did Anneke’s parents leave as a tip?
+$1.00
+$10.00
+$20.00
+$25.00
+2
+Simplify 12xy-15x+6xy
+-9xy
+3xy
+18xy-15x
+6xy-15x
+3
+What value of x makes (x+3)/2 = 8
+1
+5
+13
+19
+3
+The scale of a map is 1/4 inch = 12 miles. The distance between two cities on the map is 3 1/4 inches. What is the actual distance in miles, between the two cities?
+37
+39
+144
+156
+4
+Sarah earned a 4% commission on all of her sales in March. Her total sales were $80,000 in March. How much money did she earn from commissions? 
+$320
+$3200
+$32,000
+$320,000
+2
