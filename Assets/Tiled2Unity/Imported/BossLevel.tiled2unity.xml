@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2/18/2017 6:58:56 PM-->
+<!--Last exported: 2/18/2017 9:01:29 PM-->
 <Tiled2Unity version="1.0.9.7">
   <AssignMaterial mesh="mesh_0001" material="spritesheet" />
-  <Prefab name="BossLevel" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="3" numTilesWide="15" numTilesHigh="15" tileWidth="16" tileHeight="16" exportScale="1" mapWidthInPixels="240" mapHeightInPixels="240" backgroundColor="#808080" scale="0.0625">
+  <Prefab name="BossLevel" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="15" numTilesHigh="15" tileWidth="16" tileHeight="16" exportScale="1" mapWidthInPixels="240" mapHeightInPixels="240" backgroundColor="#808080" scale="0.0625">
     <GameObject name="Boss Sprites" x="0" y="0" z="0">
       <TileLayer offsetX="0" offsetY="0" />
       <GameObject name="spritesheet" copy="mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
