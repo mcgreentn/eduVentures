@@ -111,7 +111,7 @@ public class BattleManager : MonoBehaviour {
 
 		this.subject = EnemySubject;
 		Debug.Log(EnemyName);
-		QuestionText.text = GameStats.EnemyName + " wants to quiz test you!";
+		QuestionText.text = "ITS TIME TO D-D-D-DUEL! " + GameStats.EnemyName + " wants to brain duel!";
 		Next = 0;
 	}
 

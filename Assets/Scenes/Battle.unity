@@ -533,14 +533,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 82124052044455042, guid: 2623e7edd999f4c828481945980aef26,
+    - target: {fileID: 82451119218011670, guid: 2623e7edd999f4c828481945980aef26,
         type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82956055352572806, guid: 2623e7edd999f4c828481945980aef26,
-        type: 2}
-      propertyPath: m_PlayOnAwake
+      propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -807,6 +802,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f68bc63ef7f44e41ac2d8753b06ad6c, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1092438721 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114012510222743996, guid: 2623e7edd999f4c828481945980aef26,
+    type: 2}
+  m_PrefabInternal: {fileID: 613289040}
+  m_Script: {fileID: 11500000, guid: 24f975c51604d495fbe6ab32f8b46c86, type: 3}
 --- !u!1 &1195826835
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +878,7 @@ MonoBehaviour:
   Next: 1
   Enemy: {fileID: 0}
   subject: 0
-  SecretlyNotNotAMan: {fileID: 1496835928}
+  SecretlyNotNotAMan: {fileID: 1092438721}
 --- !u!1 &1383376585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,12 +1116,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1470550625}
---- !u!114 &1496835928 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114417282709482196, guid: 2623e7edd999f4c828481945980aef26,
-    type: 2}
-  m_PrefabInternal: {fileID: 613289040}
-  m_Script: {fileID: 11500000, guid: 24f975c51604d495fbe6ab32f8b46c86, type: 3}
 --- !u!1 &1511005329
 GameObject:
   m_ObjectHideFlags: 0

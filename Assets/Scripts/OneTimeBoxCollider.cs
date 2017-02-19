@@ -21,15 +21,19 @@ public class OneTimeBoxCollider : MonoBehaviour {
 		if(GameStats.GameMode == 0) {
 			if(ID == 0){
 				GameStats.JournalFlag += 1;
+				GameStats.Shown = false;
 				Destroy(this.gameObject);
 			}
 		 	else if (ID == 1) {
 				GameStats.JournalFlag +=1;
+				GameStats.Shown = false;
 				Destroy(this.gameObject);
 			}
 		} else if(GameStats.GameMode == 1) {
 				if(ID == 2) {
+					GameStats.GameMode += 1;
 					GameStats.JournalFlag +=1;
+					GameStats.Shown = false;
 					Destroy(this.gameObject);
 				}
 			}

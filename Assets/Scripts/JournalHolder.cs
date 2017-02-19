@@ -20,6 +20,10 @@ public class JournalHolder : MonoBehaviour {
         if(littleFlag != GameStats.JournalFlag) {
             littleFlag = GameStats.JournalFlag;
             UpdateJournalLines();
+            if(!GameStats.Shown) {
+                Show();
+                GameStats.Shown = true;
+            }
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -39,16 +43,12 @@ public class JournalHolder : MonoBehaviour {
             "Today is your 6th grade class New York State regents testing day! You are nervous about taking your tests...it can be stressful...",
             "Through your window, you see your best friend Connie walking away from school towards Central Park. What is she doing??!",
             "You decide to follow her..."};
-            Show();
         } else if(littleFlag == 1) {
             dialogueLines = new string[] {"It’s unsafe! Weird people live in central park! You need to read the safety sign for your own protection. Step up to the sign to read it."};
-            Show();
         } else if(littleFlag == 2) {
             dialogueLines = new string[] {"Looks like there is some graffiti written on the sign…"};
-            Show();
         } else if(littleFlag == 3) {
-            dialogueLines = new string[] {"[something clever]","See if the people in park have seen Connie. Walk up to strangers to talk to them. "};
-            Show();
+            dialogueLines = new string[] {"\"She won't come back to school? Well, as her best friend, it is my duty to make sure she comes back!\" you think to yourself.","See if the people in park have seen Connie. Walk up to strangers to talk to them. "};
         }
     }
 

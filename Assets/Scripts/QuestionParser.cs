@@ -47,6 +47,7 @@ public class QuestionParser : MonoBehaviour {
 			string[] split = QuestionsDict[0].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
 			for(int i = 0; i < split.Length-1; i+=6) {
 				Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
+				Debug.Log(split[i]);
 				MathQs.Add(q);
 			}
 			// split = QuestionsDict[1].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);

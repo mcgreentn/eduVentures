@@ -19,4 +19,6 @@ public class GameStats {
 
     public static int JournalFlag = 0;
     public static int DeathFlag = 0;
+
+    public static bool Shown;
 }
