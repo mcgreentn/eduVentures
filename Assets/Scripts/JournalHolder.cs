@@ -52,7 +52,7 @@ public class JournalHolder : MonoBehaviour {
         } else if(littleFlag == 4) {
             dialogueLines = new string[] {"Connie is there out on the pier. You found her!", "You should go talk to her and try to convince her to come back with you to school."};
         } else if(littleFlag == 5) {
-            dialogueLines = new string[] {"Now relaxed and refreshed from an unusual day in Central Park,S you and Connie walk back to school ready to the Regionals test."};
+            dialogueLines = new string[] {"Now relaxed and refreshed from an unusual day in Central Park, you and Connie walk back to school ready to the Regionals test."};
         }
     }
 
