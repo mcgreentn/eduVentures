@@ -17,10 +17,10 @@ Roberto has a container with 4,200 milliliters of water. How many liters of wate
 42
 3
 A circle has a radius of 18 inches. What is the circumference of the circle in terms of pi? C=2(pi)r
-36
-20
-18
-9
+36
+20
+18
+9
 1
 Mica and Denise are reading the same novel. Mica has read 1/2 of the novel, and Denise has read 1/3 of the novel. How much more of the novel has Mica read than Denise?
 1/6
@@ -61,20 +61,20 @@ Which measure is equivalent to 1.5 kilograms? (1 kilogram = 1,000 grams)
 Simplify the expression below. –4x - (–x)
 5x
 3x
-–3x
-–5x
+(–3x)
+(–5x)
 3
 Gary and Thomas are playing a game with number cards. At the end of the game, Thomas still has 5 cards. If the value of each card is –50 points, how many points does Thomas have?
-–250
-–10
+(–250)
+(–10)
 10
 250
 1
 Find the value of a in the equation below. 3a + 2 = a - 6
 4
 2
-–2
-–4
+(– 2)
+(– 4)
 4
 Derek has 12 shirts in his closet. If 2 out of every 3 of these shirts are striped, how many striped shirts does Derek have in his closet?
 2
@@ -149,10 +149,10 @@ b+a<b*b
 b*b < b+a
 1
 Janine’s dog weighs three pounds less than twice the weight of Wanda’s dog, d. Which expression represents the weight of Janine’s dog?
-2+d-3
-3+d-2
-2d-3
-3-2d
+2+d - 3
+3+d -2
+2d - 3
+3 - 2d
 3
 Carol wants to earn at least $150.00 for her charity while running a race. She will earn $20.00 for participating plus $7.00 for each mile she runs. If m represents the number of miles she runs, which inequality represents the money Carol wants to earn?
 7m + 20 <= 150
