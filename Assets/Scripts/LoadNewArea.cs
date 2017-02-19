@@ -19,9 +19,9 @@ public class LoadNewArea : MonoBehaviour {
 
 void OnTriggerEnter2D(Collider2D other) {
 
-	if(other.gameObject.name == "Player")
+	if(other.gameObject.name == "Player" && GameStats.TrainersBeaten == 6)
 	{
-		Application.LoadLevel(levelToLoad);
+		Application.LoadLevel("centralParkBossLevel");
 	}
 }
 

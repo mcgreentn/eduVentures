@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class JournalScriptManager : MonoBehaviour {
     public GameObject jBox;
     public Text jtext;
@@ -26,6 +27,9 @@ public class JournalScriptManager : MonoBehaviour {
                 journalActive = false;
                 currentLine = 0;
                 GameStats.CanMove = true;
+                if(GameStats.GameMode == 4) {
+                    SceneManager.LoadScene("End Card");
+                }
             }
             jtext.text = dialogLines[currentLine];
         }

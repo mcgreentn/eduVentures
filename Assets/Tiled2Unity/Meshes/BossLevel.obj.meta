@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 25af362be078c2b458604e192dfbda86
-timeCreated: 1487471752
+timeCreated: 1487474883
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -12,13 +12,12 @@ ModelImporter:
     2300000: mesh_0001
     3300000: mesh_0001
     4300000: mesh_0001
-    11400000: mesh_0001
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
-    legacyGenerateAnimations: 0
+    legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -40,7 +39,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -55,7 +54,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 2
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
