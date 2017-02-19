@@ -267,8 +267,9 @@ public class BattleManager : MonoBehaviour {
 		Next = 7;
 		GameStats.BattleWon = 1;
 		GameStats.TrainersBeaten += 1;
-
-		GameStats.GameMode += 1;
+		if(GameStats.EnemyName.Equals("Connie")) {
+			GameStats.GameMode += 1;	
+		}
 	}
 
 }

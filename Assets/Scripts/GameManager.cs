@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour {
 	public void SetStartPosition() {
 		if(SceneManager.GetActiveScene().name.Equals("centralParkMapOneVersion2")) {
 			StartPlayerPosition = new Vector3(-4.26f, -4.08f, 0f);
-		} else if(SceneManager.GetActiveScene().name.Equals("TestPortTest")) {
-			StartPlayerPosition = new Vector3(-4.26f, -4.08f, 0f);
+		} else if(SceneManager.GetActiveScene().name.Equals("CentralParkBossLevel")) {
+			StartPlayerPosition = new Vector3(-1.94f, -8.15f, 0f);
 		}
 	}
 }
