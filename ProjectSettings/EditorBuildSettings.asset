@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Central Park 1 + AndrenaGalaxy Test Scene.unity
   - enabled: 1
     path: Assets/Scenes/TestPortTest.unity
+  - enabled: 1
+    path: Assets/Scenes/centralParkMapTwoVersion1Boss.unity
