@@ -153,6 +153,7 @@ public class BattleManager : MonoBehaviour {
 		int y = 0;
 		Int32.TryParse(CurrentQuestion.Answer, out y);
 		Next = 4;
+		SecretlyNotNotAMan.PlayRandomBoom();
 		if(choice == y) {
 			// got question correct
 			DisplayRight();
@@ -243,6 +244,7 @@ public class BattleManager : MonoBehaviour {
 		GameStats.Beaten[GameStats.EnemyName] = true;
 		Next = 7;
 		GameStats.BattleWon = 1;
+		GameStats.TrainersBeaten += 1;
 	}
 
 }

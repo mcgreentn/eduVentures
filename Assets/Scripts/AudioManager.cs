@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
 	public AudioSource duelSound;
 
+	public AudioSource[] soundeffects;
+
 	void Start() {
 	}
 
@@ -32,6 +34,11 @@ public class AudioManager : MonoBehaviour
 	IEnumerator PlayBattleMusic() {
 		yield return new WaitForSeconds(3.7f);
 		battleMusic.Play();
+	}
+
+	public void PlayRandomBoom() {
+		AudioSource fx = soundeffects[Random.Range(0, soundeffects.Length)];
+		fx.Play();
 	}
 ////	private static bool playerExists;
 //
