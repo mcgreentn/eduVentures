@@ -13,10 +13,8 @@ public class NPC : MonoBehaviour
 	public GameManager GM;
 	public int ID;
 	public bool Beaten {get;set;}
-	private AudioManager AMan;
+	public AudioManager AMan;
 	public static int LastID;
-
-	private NPC self;
 
 	void Start() {
 		ID = LastID;
@@ -32,13 +30,10 @@ public class NPC : MonoBehaviour
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		AMan = FindObjectOfType<AudioManager>();
-		diamang.BattleFlag = true;
-		diamang.ShowBox(this.name, this.BattleEnterDialogue );
 
 		if(GameStats.GameMode == 0) {
 			diamang.ShowBox(this.name, "Shouldn't you be in school?");
-		} else if(GameStats.GameMode == 1) {
+		} else if(GameStats.GameMode >= 1) {
 			if(!GameStats.Beaten[Name]) {
 				GameStats.EnemyName = Name;
 				GameStats.EnemySubject = Subject;
@@ -49,6 +44,7 @@ public class NPC : MonoBehaviour
 				diamang.ShowBox(this.name, this.BattleEnterDialogue);
 				GameStats.LastScene = SceneManager.GetActiveScene().name;
 				GM.SavePlayerPosition();
+				AMan.PlayAlert();
 			} else {
 				diamang.BattleFlag = false;
 				diamang.ShowBox(this.name, this.PostBattleDialogue);

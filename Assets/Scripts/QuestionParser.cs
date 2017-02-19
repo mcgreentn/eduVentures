@@ -13,6 +13,7 @@ public class QuestionParser : MonoBehaviour {
 	//Singleton
 	private static QuestionParser instance = null;
 
+	private static bool made;
 	public static QuestionParser Instance
 	{
 		get
@@ -37,30 +38,33 @@ public class QuestionParser : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		MathQs = new List<Question>();
-		// EnglishQs = new List<Question>();
-		ScienceQs = new List<Question>();
-		HistoryQs = new List<Question>();
-		// loop through every text asset, split apart by line into split
-		string[] split = QuestionsDict[0].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
-		for(int i = 0; i < split.Length-1; i+=6) {
-			Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
-			MathQs.Add(q);
-		}
-		// split = QuestionsDict[1].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
-		// for(int i = 0; i < split.Length-1; i+=6) {
-		// 	Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
-		// 	EnglishQs.Add(q);
-		// }
-		split = QuestionsDict[1].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
-		for(int i = 0; i < split.Length-1; i+=6) {
-			Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
-			ScienceQs.Add(q);
-		}
-		split = QuestionsDict[2].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
-		for(int i = 0; i < split.Length-1; i+=6) {
-			Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
-			HistoryQs.Add(q);
+		if(!made) {
+			MathQs = new List<Question>();
+			// EnglishQs = new List<Question>();
+			ScienceQs = new List<Question>();
+			HistoryQs = new List<Question>();
+			// loop through every text asset, split apart by line into split
+			string[] split = QuestionsDict[0].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
+			for(int i = 0; i < split.Length-1; i+=6) {
+				Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
+				MathQs.Add(q);
+			}
+			// split = QuestionsDict[1].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
+			// for(int i = 0; i < split.Length-1; i+=6) {
+			// 	Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
+			// 	EnglishQs.Add(q);
+			// }
+			split = QuestionsDict[1].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
+			for(int i = 0; i < split.Length-1; i+=6) {
+				Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
+				HistoryQs.Add(q);
+			}
+			split = QuestionsDict[2].text.Replace("\r\n", "\n").Replace("\r","\n").Split("\n"[0]);
+			for(int i = 0; i < split.Length-1; i+=6) {
+				Question q = new Question(split[i], split[i+1], split[i+2], split[i+3], split[i+4], split[i+5]);
+				ScienceQs.Add(q);
+			}
+			made = true;
 		}
 	}
 }

@@ -11,10 +11,10 @@ public class DialogueManager : MonoBehaviour {
 	public bool DialogueActive;
 
 	public bool BattleFlag;
-
+	public AudioManager AM;
 	// Use this for initialization
 	void Start () {
-
+		AM.PlayBackground();
 	}
 
 	// Update is called once per frame
@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour {
 			if (BattleFlag)
 			{
 				SceneManager.LoadScene ("Battle");
+
 			}
 		}
 	}
