@@ -46,8 +46,8 @@ public class BattleManager : MonoBehaviour {
 
 		StartBattle(GameStats.EnemyName, GameStats.EnemySubject);
 
-		attacksPre = new string[] {"Knowledge", "Thought", "Mental", "Smart", "Thinking", "Brain", "Mind", "Genius", "Cranial"};
-		attacksPost = new string[]{"Smash", "Storm", "Rain", "Bolt", "Charge", "Wave", "Burst", "Beam", "Power", "Slice", "Pow"};
+		attacksPre = new string[] {"Knowledge", "Thought", "Mental", "Smart", "Thinking", "Brain", "Mind", "Genius", "Cranial", "Neural", "Intelligent"};
+		attacksPost = new string[]{"Smash", "Storm", "Rain", "Bolt", "Charge", "Wave", "Burst", "Beam", "Power", "Slice", "Pow", "Scream", "Blow"};
 
 		NPC.LastID = 0;
 		GameStats.Init = true;
