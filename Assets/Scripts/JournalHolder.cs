@@ -49,6 +49,10 @@ public class JournalHolder : MonoBehaviour {
             dialogueLines = new string[] {"Looks like there is some graffiti written on the sign…"};
         } else if(littleFlag == 3) {
             dialogueLines = new string[] {"\"She won't come back to school? Well, as her best friend, it is my duty to make sure she comes back!\" you think to yourself.","See if the people in park have seen Connie. Walk up to strangers to talk to them. "};
+        } else if(littleFlag == 4) {
+            dialogueLines = new string[] {"Connie is there out on the pier. You found her!", "You should go talk to her and try to convince her to come back with you to school."};
+        } else if(littleFlag == 5) {
+            dialogueLines = new string[] {"Now relaxed and refreshed from an unusual day in Central Park,S you and Connie walk back to school ready to the Regionals test."};
         }
     }
 

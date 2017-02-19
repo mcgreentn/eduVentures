@@ -119,11 +119,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1809954239300236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd5da4124d04a44fda752ce7ff9bf254, type: 3}
+  m_Script: {fileID: 11500000, guid: 953426558e20eb547912948e8f059cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jBox: {fileID: 1083062346147878}
-  jtext: {fileID: 114967363483842284}
+  jBox: {fileID: 0}
+  jtext: {fileID: 0}
   journalActive: 0
   dialogLines: []
   currentLine: 0

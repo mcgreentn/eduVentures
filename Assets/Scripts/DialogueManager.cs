@@ -29,7 +29,13 @@ public class DialogueManager : MonoBehaviour {
 				SceneManager.LoadScene ("Battle");
 
 			}
+			Debug.Log("Mode:" + GameStats.GameMode);
+			if (GameStats.GameMode == 3) {
+				GameStats.GameMode += 1;
+			}
+			Debug.Log("Mode:" + GameStats.GameMode);
 		}
+
 	}
 	/**
 	 * Shows the dialogue box with the character saying the text in this format

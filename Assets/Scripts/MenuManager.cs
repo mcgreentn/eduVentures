@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour {
 
 	public void StartGame() {
-		SceneManager.LoadScene("Central Park 1 + AndrenaGalaxy Test Scene");
+
+		GameStats.QuestionsCorrect = 0;
+		GameStats.QuestionsAsked = 0;
+		GameStats.Munnie = 0;
+		GameStats.Init = false;
+		GameStats.CanMove = true;
+		GameStats.GameMode = 0;
+		GameStats.JournalFlag = 0;
+		GameStats.DeathFlag = 0;
+	    GameStats.TrainersBeaten = 0;
+		GameStats.Beaten = new Dictionary<string, bool>();
+		SceneManager.LoadScene("centralParkMapOneVersion2");
 	}
 }

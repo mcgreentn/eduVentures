@@ -10,8 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle.unity
   - enabled: 1
-    path: Assets/Scenes/Central Park 1 + AndrenaGalaxy Test Scene.unity
+    path: Assets/Scenes/centralParkMapOneVersion2.unity
   - enabled: 1
-    path: Assets/Scenes/TestPortTest.unity
+    path: Assets/Scenes/centralParkBossLevel.unity
   - enabled: 1
-    path: Assets/Scenes/centralParkMapTwoVersion1Boss.unity
+    path: Assets/Scenes/End Card.unity

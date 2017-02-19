@@ -51,6 +51,9 @@ public class BattleManager : MonoBehaviour {
 
 		NPC.LastID = 0;
 		GameStats.Init = true;
+		if(GameStats.EnemyName.Equals("Connie")){
+			TotalCount = 10;
+		}
 	}
 
 	// Update is called once per frame
@@ -125,6 +128,20 @@ public class BattleManager : MonoBehaviour {
 		QuestionCount += 1;
 		Question current = new Question();
 		// ask a question
+		if(GameStats.EnemyName.Equals("Connie")) {
+			int x = UnityEngine.Random.Range(0, 3);
+			switch (x) {
+				case 0:
+					subject = SubjectType.Math;
+					break;
+				case 1:
+					subject = SubjectType.History;
+					break;
+				case 2:
+					subject = SubjectType.Science;
+					break;
+			}
+		}
 		switch(subject) {
 			case SubjectType.Math:
 				current = QuestionParser.MathQs[UnityEngine.Random.Range(0, QuestionParser.MathQs.Count)];
@@ -250,6 +267,8 @@ public class BattleManager : MonoBehaviour {
 		Next = 7;
 		GameStats.BattleWon = 1;
 		GameStats.TrainersBeaten += 1;
+
+		GameStats.GameMode += 1;
 	}
 
 }
