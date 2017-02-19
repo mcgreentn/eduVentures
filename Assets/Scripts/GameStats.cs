@@ -8,6 +8,9 @@ public class GameStats {
     public static string LastScene;
     public static int BattleWon;
 
+    public static int QuestionsCorrect = 0;
+    public static int QuestionsAsked = 0;
+
     public static float Munnie;
 
     public static Dictionary<string, bool> Beaten = new Dictionary<string, bool>();

@@ -147,6 +147,8 @@ public class BattleManager : MonoBehaviour {
 		ChoiceD.text = current.ChoiceD;
 		Debug.Log(CurrentQuestion.Answer);
 		Next = 2;
+
+		GameStats.QuestionsAsked += 1;
 	}
 
 	public void AnswerQuestion(int choice) {
@@ -161,6 +163,7 @@ public class BattleManager : MonoBehaviour {
 			// got question wrong
 			DisplayWrong();
 		}
+
 	}
 
 	public void DisplayRight() {
@@ -181,6 +184,8 @@ public class BattleManager : MonoBehaviour {
 		EnemyHurt.Play();
 		MainCamera.Play("PlayerAttack");
 		BattleToadsMatrix.Play("Attack");
+
+		GameStats.QuestionsCorrect += 1;
 	}
 
 	public void DisplayWrong() {
