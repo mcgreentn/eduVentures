@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 68fb8915e740d9c49999db2fba61574c
+timeCreated: 1487465074
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: RofiTaste
+  fontNames:
+  - RofiTaste
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
