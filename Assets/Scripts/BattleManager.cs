@@ -37,10 +37,11 @@ public class BattleManager : MonoBehaviour {
 
 	private string[] attacksPre;
 	private string[] attacksPost;
-	private AudioManager SecretlyNotNotAMan;
+	public AudioManager SecretlyNotNotAMan;
 
 	// Use this for initialization
 	void Start () {
+		SecretlyNotNotAMan.PlayBattle();
 		Next = -1;
 
 		StartBattle(GameStats.EnemyName, GameStats.EnemySubject);
@@ -54,8 +55,6 @@ public class BattleManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		SecretlyNotNotAMan = FindObjectOfType<AudioManager>();
-
 		if(Next == 0 && Input.GetKeyDown(KeyCode.Space)) {
 			Next++;
 			AskQuestion();
