@@ -18,8 +18,8 @@ public class GameStats {
 
     public static bool CanMove = true;
 
-    public static int GameMode = 2;
-    public static int JournalFlag = 3;
+    public static int GameMode = 0;
+    public static int JournalFlag = 0;
 
     public static int DeathFlag = 0;
     public static int TrainersBeaten = 0;
